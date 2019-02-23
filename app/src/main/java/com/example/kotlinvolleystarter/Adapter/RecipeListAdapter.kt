@@ -1,6 +1,7 @@
 package com.example.kotlinvolleystarter.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -9,8 +10,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.kotlinvolleystarter.Controller.WebViewActivity
 import com.example.kotlinvolleystarter.Model.Recipe
 import com.example.kotlinvolleystarter.R
+import com.example.kotlinvolleystarter.Utils.EXTRA_LINK
 import com.squareup.picasso.Picasso
 
 class RecipeListAdapter(private val list: ArrayList<Recipe>,
@@ -49,6 +52,14 @@ class RecipeListAdapter(private val list: ArrayList<Recipe>,
             }else {
                 Picasso.get().load(android.R.drawable.ic_menu_report_image).into(thumbnail)
             }
+
+            linkButton.setOnClickListener {
+
+                var intent = Intent(context, WebViewActivity::class.java)
+                intent.putExtra(EXTRA_LINK, recipe.link.toString())
+                context.startActivity(intent)
+            }
+
         }
     }
 }
