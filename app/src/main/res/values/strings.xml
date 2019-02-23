@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinVolleyStarter</string>
+    <string name="recipe_image">Recipe image</string>
 </resources>
