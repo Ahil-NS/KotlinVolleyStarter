@@ -1,7 +1,9 @@
-package com.example.kotlinvolleystarter
+package com.example.kotlinvolleystarter.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.android.volley.toolbox.Volley
+import com.example.kotlinvolleystarter.R
 
 class MainActivity : AppCompatActivity() {
 
